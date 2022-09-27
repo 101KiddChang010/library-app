@@ -54,7 +54,19 @@ function createCard(title, author, pages, read) {
     newCard.appendChild(readParagraph);
     newCard.appendChild(input);
 }
-createCard("1", "2", "3", true);
+
+function divShow() {
+    document.getElementById("container-addbook").style.display = "flex";
+}
+
+function divHide() {
+    document.getElementById("container-addbook").style.display = "none";
+}
+
+// adds book
+document.getElementById("addbook-btn").addEventListener("click", function() {
+
+});
 
 let bookOne = new Book("habits", "j.k rowlin", "52", "unread");
 let bookTwo = new Book("money", "rob keyes", "152", "unread");
