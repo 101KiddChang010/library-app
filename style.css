@@ -87,7 +87,7 @@ footer {
     height: 75%;
 }
 
-#addbook-btn {
+button {
     background: #7c7c7c2b;
     color: white;
     height: 36px;
@@ -95,10 +95,10 @@ footer {
     cursor: pointer;
 }
 
-#addbook-btn:hover {
+button:hover {
     background: #aaaaaa2b;
 }
 
-#addbook-btn:active {
+button:active {
     background: rgba(75, 62, 250, 0.6);
 }
