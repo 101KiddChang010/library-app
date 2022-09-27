@@ -9,7 +9,28 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
-    <body>    
+    <body>
+        <div id="container-addbook">
+            <div id="container-addbook-form">
+                <div id="container-addbook-form-top">
+                    <button id="close-container-btn" onclick="divHide()">
+                        <i class="material-icons">close</i>
+                    </button>
+                </div>
+                <div id="container-addbook-form-bottom">
+                    <form action="">
+                        <label for="title">Title:</label>
+                        <input type="text" name="title" id="title">
+                        <label for="author">Author:</label>
+                        <input type="text" name="author" id="author">
+                        <label for="pages">Pages:</label>
+                        <input type="number" name="pages" id="pages">
+                        <label for="read">read?</label>
+                        <input type="checkbox" name="read" id="read">
+                    </form>
+                </div>
+            </div>
+        </div>    
         <div id="container-main">
             <h1>Library App</h1>
             <div id="container-app">
@@ -18,13 +39,15 @@
                         <p>Title: <span id="title">xyz</span></p>
                         <p>Author: <span id="author">xyz</span></p>
                         <p>Number of Pages: <span id="pages">0</span></p>
-                        Mark as Read 
-                        <input type="checkbox"></button>
+                        Mark as Read
+                        <input type="checkbox" checked>
                     </div>
                 </div>
                 <div id="container-bottom">
                     <p>Add Book</p> 
-                    <button id="add-book"><i class="material-icons">add</i></button>
+                    <button id="addbook-btn" onclick="divShow()">
+                        <i class="material-icons">add</i>
+                    </button>
                 </div>
             </div>
         </div>
