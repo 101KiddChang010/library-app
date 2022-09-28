@@ -82,20 +82,20 @@ footer {
     height: 100%;
 }
 
-#container-addbook-form {
+#container-addbook-div {
     background:rgba(15, 15, 15, 0.85);
     height: 300px;
     width: 300px;
 }
 
-#container-addbook-form-top {
+#container-addbook-div-top {
     background: rgba(44, 27, 0, 0.85);
     margin: 0 0 10px 0;
     display: flex;
     justify-content: flex-end;
 }
 
-#container-addbook-form-bottom {
+#container-addbook-div-bottom {
     display: flex;
     gap: 10px;
     flex-direction: column;
