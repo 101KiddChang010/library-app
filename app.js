@@ -9,11 +9,6 @@ document.getElementById("submit-btn").addEventListener("click", function() {
     const read = document.querySelector("#read");
 
     createCard(title.value, author.value, pages.value, read.checked);
-
-    title.value = "";
-    author.value = "";
-    pages.value = "";
-    read.checked = false;
 });
 
 document.getElementById("delete-all-btn").addEventListener("click", function() {
@@ -66,4 +61,13 @@ function divShow() {
 
 function divHide() {
     document.getElementById("container-addbook").style.display = "none";
+    
+    const title = document.querySelector("#title");
+    const author = document.querySelector("#author");
+    const pages = document.querySelector("#pages");
+    const read = document.querySelector("#read");
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+    read.checked = false;
 }
