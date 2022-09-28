@@ -11,6 +11,7 @@ document.getElementById("submit-btn").addEventListener("click", function() {
     createCard(title.value, author.value, pages.value, read.checked);
 });
 
+// Deletes all books
 document.getElementById("delete-all-btn").addEventListener("click", function() {
     let c = topContainer.lastElementChild;
     while (c) {
@@ -19,6 +20,7 @@ document.getElementById("delete-all-btn").addEventListener("click", function() {
     }
 });
 
+// Creates book card and pushes card to html for user to view
 function createCard(title, author, pages, read) {
     const newCard = document.createElement("div");
     const titleParagraph = document.createElement("p");
