@@ -84,10 +84,30 @@ footer {
 
 #container-addbook-form {
     background:rgba(15, 15, 15, 0.85);
-    height: 75%;
+    height: 300px;
+    width: 300px;
 }
 
-button {
+#container-addbook-form-top {
+    background: rgba(44, 27, 0, 0.85);
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#container-addbook-form-bottom {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input, #submit-btn {
+    background: #7c7c7c2b;
+}
+
+.icon-btn {
     background: #7c7c7c2b;
     color: white;
     height: 36px;
@@ -95,10 +115,10 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.icon-btn:hover {
     background: #aaaaaa2b;
 }
 
-button:active {
+.icon-btn:active, #submit-btn:active {
     background: rgba(75, 62, 250, 0.6);
 }
