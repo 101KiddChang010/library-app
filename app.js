@@ -16,6 +16,14 @@ document.getElementById("submit-btn").addEventListener("click", function() {
     read.checked = false;
 });
 
+document.getElementById("delete-all-btn").addEventListener("click", function() {
+    let c = topContainer.lastElementChild;
+    while (c) {
+        topContainer.removeChild(c);
+        c = topContainer.lastElementChild
+    }
+});
+
 function createCard(title, author, pages, read) {
     const newCard = document.createElement("div");
     const titleParagraph = document.createElement("p");
@@ -36,7 +44,7 @@ function createCard(title, author, pages, read) {
     if (pages === '') {
         pages = 0
     } 
-    
+
     titleParagraph.textContent = "Title: " + title;
     authorParagraph.textContent = "Author: " + author;
     pagesParagraph.textContent = "Number of Pages: " + pages;
