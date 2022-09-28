@@ -33,6 +33,10 @@ function createCard(title, author, pages, read) {
         input.checked = false;
     }
 
+    if (pages === '') {
+        pages = 0
+    } 
+    
     titleParagraph.textContent = "Title: " + title;
     authorParagraph.textContent = "Author: " + author;
     pagesParagraph.textContent = "Number of Pages: " + pages;
