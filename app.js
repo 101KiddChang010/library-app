@@ -1,30 +1,20 @@
 //  DOM selectors
 const topContainer = document.getElementById("container-top");
 
-// variables
-let myLibrary = [];
+// grabs user input and creates card function
+document.getElementById("submit-btn").addEventListener("click", function() {
+    const title = document.querySelector("#title");
+    const author = document.querySelector("#author");
+    const pages = document.querySelector("#pages");
+    const read = document.querySelector("#read");
 
-// Functions
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function() {
-        return (title + " by " + author + ", " + pages + " pages, " + read);
-    }
-}
+    createCard(title.value, author.value, pages.value, read.checked);
 
-function addBookToLibrary(userBook) {
-    myLibrary.push(userBook);
-}
-
-function displayLibrary(library) {
-
-    for (const books of library) {
-        // console.log(books.title);
-    }
-}
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+    read.checked = false;
+});
 
 function createCard(title, author, pages, read) {
     const newCard = document.createElement("div");
@@ -53,8 +43,11 @@ function createCard(title, author, pages, read) {
     newCard.appendChild(pagesParagraph);
     newCard.appendChild(readParagraph);
     newCard.appendChild(input);
+
+    topContainer.appendChild(newCard);
 }
 
+// --Hides or shows div
 function divShow() {
     document.getElementById("container-addbook").style.display = "flex";
 }
@@ -62,16 +55,3 @@ function divShow() {
 function divHide() {
     document.getElementById("container-addbook").style.display = "none";
 }
-
-// adds book
-document.getElementById("addbook-btn").addEventListener("click", function() {
-
-});
-
-let bookOne = new Book("habits", "j.k rowlin", "52", "unread");
-let bookTwo = new Book("money", "rob keyes", "152", "unread");
-//console.log(bookOne.info());
-
-addBookToLibrary(bookOne);
-addBookToLibrary(bookTwo);
-displayLibrary(myLibrary);
