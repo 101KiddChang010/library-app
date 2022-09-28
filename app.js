@@ -1,7 +1,7 @@
 //  DOM selectors
 const topContainer = document.getElementById("container-top");
 
-// grabs user input and creates card function
+// Grabs user input and creates card function
 document.getElementById("submit-btn").addEventListener("click", function() {
     const title = document.querySelector("#title");
     const author = document.querySelector("#author");
@@ -9,6 +9,24 @@ document.getElementById("submit-btn").addEventListener("click", function() {
     const read = document.querySelector("#read");
 
     createCard(title.value, author.value, pages.value, read.checked);
+
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+    read.checked = false;
+});
+
+// Deletes all user text-field inputs if close button is clicked
+document.getElementById("close-container-btn").addEventListener("click", function() {
+    const title = document.querySelector("#title");
+    const author = document.querySelector("#author");
+    const pages = document.querySelector("#pages");
+    const read = document.querySelector("#read");
+
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+    read.checked = false;
 });
 
 // Deletes all books
@@ -63,13 +81,4 @@ function divShow() {
 
 function divHide() {
     document.getElementById("container-addbook").style.display = "none";
-    
-    const title = document.querySelector("#title");
-    const author = document.querySelector("#author");
-    const pages = document.querySelector("#pages");
-    const read = document.querySelector("#read");
-    title.value = "";
-    author.value = "";
-    pages.value = "";
-    read.checked = false;
 }
