@@ -11,13 +11,13 @@
 </head>
     <body>
         <div id="container-addbook">
-            <div id="container-addbook-form">
-                <div id="container-addbook-form-top">
+            <div id="container-addbook-div">
+                <div id="container-addbook-div-top">
                     <button id="close-container-btn" class="icon-btn" onclick="divHide()">
                         <i class="material-icons">close</i>
                     </button>
                 </div>
-                <form action="" id="container-addbook-form-bottom">
+                <div id="container-addbook-div-bottom">
                     <label for="title">Title:</label>
                     <input type="text" name="title" id="title">
                     <label for="author">Author:</label>
@@ -26,10 +26,10 @@
                     <input type="number" name="pages" id="pages">
                     <label for="read">read?</label>
                     <input type="checkbox" name="read" id="read">
-                    <button id="submit-btn" type="submit">
+                    <button id="submit-btn" onclick="divHide()">
                         Submit
                     </button>
-                </form>
+                </div>
             </div>
         </div>    
         <div id="container-main">
